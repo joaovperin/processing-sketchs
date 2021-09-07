@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.4</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- Group information -->
+	<groupId>br.com.jpe</groupId>
+	<artifactId>processing-sketchs</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- Project metadata -->
+	<name>processing-sketchs</name>
+	<description>Processing sketchs - Demo project</description>
+
+	<!-- Project properties -->
+	<properties>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<!-- Libs versions -->
+		<processing.version>3.2.3</processing.version>
+		<jnalibs.version>4.5.1</jnalibs.version>
+	</properties>
+
+
+	<dependencies>
+		<!--
+			CORE (Processing) dependencies
+		 -->
+
+		<!-- Core requirements -->
+		<dependency>
+			<groupId>org.processing</groupId>
+			<artifactId>core</artifactId>
+			<version>${processing.version}</version>
+		</dependency>
+
+		<!--
+			DESKTOP (optional) dependencies
+		 -->
+
+		<!-- Video requirements -->
+		<dependency>
+			<groupId>org.processing</groupId>
+			<artifactId>video</artifactId>
+			<version>${processing.version}</version>
+		</dependency>
+		<!-- PDF requirements -->
+		<dependency>
+			<groupId>org.processing</groupId>
+			<artifactId>pdf</artifactId>
+			<version>${processing.version}</version>
+		</dependency>
+		<!-- Networking requirements -->
+		<dependency>
+			<groupId>org.processing</groupId>
+			<artifactId>net</artifactId>
+			<version>${processing.version}</version>
+		</dependency>
+		<!-- Serial requirements -->
+		<dependency>
+			<groupId>org.processing</groupId>
+			<artifactId>serial</artifactId>
+			<version>${processing.version}</version>
+		</dependency>
+		<!-- Java Native Access -->
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+			<version>${jnalibs.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna-platform</artifactId>
+			<version>${jnalibs.version}</version>
+		</dependency>
+
+		<!--
+			WEB (Optional) dependencies
+		 -->
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!-- Spring Tests -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
