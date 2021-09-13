@@ -42,6 +42,17 @@
 		</dependency>
 
 		<!--
+			CORE (Utils) dependencies
+		 -->
+
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+		</dependency>
+
+		<!--
 			DESKTOP (optional) dependencies
 
 			Credits: https://github.com/wilcotomassen/processing3-maven
