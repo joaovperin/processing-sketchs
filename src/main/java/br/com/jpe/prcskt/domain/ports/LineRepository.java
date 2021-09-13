@@ -16,6 +16,8 @@ public class LineRepository {
     private LineRepository() {
         this._lines = new ArrayList<>();
         this._lines.add(new Line(new Point(10, 10), new Point(100, 100)));
+        this._lines.add(new Line(new Point(10, 10), new Point(50, 100)));
+        this._lines.add(new Line(new Point(10, 10), new Point(150, 100)));
     }
 
     public static List<Line> get_lines() {

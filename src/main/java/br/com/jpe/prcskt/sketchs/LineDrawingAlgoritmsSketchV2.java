@@ -28,16 +28,25 @@ public class LineDrawingAlgoritmsSketchV2 extends PApplet {
         background(0);
 
         for (Line line : LineRepository.get_lines()) {
-            var p0 = line.getP0();
-            var p1 = line.getP1();
+            final var offsetDDA = 50;
+            final var offsetBresenham = 300;
+
+            var p0 = line.getP0().offsetX(offsetDDA);
+            var p1 = line.getP1().offsetX(offsetDDA);
+
+            fill(color(80, 32, 203)); // blue
+            text("BRESEN", 80, 250);
 
             stroke(color(80, 32, 203)); // blue
             drawLineBresenham(p0.getX(), p0.getY(), p1.getX(), p1.getY());
 
-            p0 = line.getP0().offsetX(50);
-            p1 = line.getP1().offsetX(50);
+            p0 = line.getP0().offsetX(offsetBresenham);
+            p1 = line.getP1().offsetX(offsetBresenham);
             stroke(color(200, 80, 97)); // red☺
-            drawLineDDA(60, 10, 160, 100);
+            drawLineDDA(p0.getX(), p0.getY(), p1.getX(), p1.getY());
+
+            fill(color(200, 80, 97)); // red☺
+            text("DDA", 430, 250);
         }
     }
 
